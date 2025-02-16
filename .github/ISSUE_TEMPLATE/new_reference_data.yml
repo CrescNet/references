@@ -1,0 +1,97 @@
+name: New reference data
+description: Suggest a new reference data set that should be added to the collection of this project.
+labels: 'new-reference-data'
+title: 'Add reference data'
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to inform us about a new reference data set to be added to our collection!
+        Please provide the following information about the data set, you wish to add to this project:
+  - type: input
+    id: publication
+    attributes:
+      label: Publication
+      description: Where was the data set originally published? And what should be cited when using the data set?
+      placeholder: DOI or citation
+    validations:
+      required: true
+  - type: input
+    id: disease
+    attributes:
+      label: Disease
+      description: Is the data set disease-specific? Leave this blank if it applies to the healthy population.
+      placeholder: Disease name or unique identifier
+  - type: input
+    id: region
+    attributes:
+      label: Region
+      description: To what region the data set should be applied to?
+      placeholder: Name of the region or MeSH code
+  - type: input
+    id: feature
+    attributes:
+      label: Feature
+      description: What bodily feature is described by this reference data set?
+      placeholder: Feature name or LOINC code
+    validations:
+      required: true
+  - type: input
+    id: unit
+    attributes:
+      label: Unit
+      description: Unit of measurement of the reference data set.
+      placeholder: Unified Code for Units of Measure (UCUM)
+  - type: input
+    id: methodName
+    attributes:
+      label: Method
+      description: Name of the method, the reference data set was created with.
+      placeholder: LMS
+    validations:
+      required: true
+  - type: input
+    id: methodIri
+    attributes:
+      label: Method link
+      description: Link to method or publication the method was introduced in.
+      placeholder: 'https://pubmed.ncbi.nlm.nih.gov/2354692'
+    validations:
+      required: true
+  - type: textarea
+    id: domainRanges
+    attributes:
+      label: Domain ranges
+      description: Additional features to which the reference dataset is adjusted.
+      value: |
+        - Sex: female, male
+        - Age: 0 - 18 years
+    validations:
+      required: true
+  - type: input
+    id: format
+    attributes:
+      label: Format
+      description: Format of the data set.
+      placeholder: 'CSV, XLSX, etc.'
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Data set source
+      description: URL where the data set can be downloaded from.
+      placeholder: 'https://example.com'
+    validations:
+      required: true
+  - type: dropdown
+    id: access
+    attributes:
+      label: Access
+      description: How can people access the data set? Is a login required to download?
+      options:
+        - public
+        - restricted
+        - on request to authors
+    validations:
+      required: true

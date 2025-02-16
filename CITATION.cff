@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: If you use the content of this repository, please cite it using these metadata.
+title: Reference Data Collection
+abstract: |
+  This project aims to collect reference data for observable bodily features.
+authors:
+  - affiliation: Leipzig University
+    family-names: Beger
+    given-names: Christoph
+    orcid: https://orcid.org/0000-0002-1166-0368
+date-released: 2025-02-18
+keywords:
+  - reference-data
+license: MIT
