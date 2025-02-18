@@ -32,25 +32,25 @@ function publicationByYear(row: { publication: { name: string; year: number } })
 function populateReferences(dataSet) {
   const d = { ...dataSet }
   // @ts-expect-error TS7053
-  d.publication = publications[d.publication]
+  if (d.publication) d.publication = publications[d.publication]
   // @ts-expect-error TS7053
-  d.disease = diseases[d.disease]
+  if (d.disease) d.disease = diseases[d.disease]
   // @ts-expect-error TS7053
-  d.region = regions[d.region]
+  if (d.region) d.region = regions[d.region]
   // @ts-expect-error TS7053
-  d.feature = features[d.feature]
+  if (d.feature) d.feature = features[d.feature]
   // @ts-expect-error TS7053
   d.domainRanges?.forEach((r) => {
     // @ts-expect-error TS7053
-    r.feature = features[r.feature]
+    if (r.feature) r.feature = features[r.feature]
     // @ts-expect-error TS7053
-    r.unit = units[r.unit]
+    if (r.unit) r.unit = units[r.unit]
     return r
   })
   // @ts-expect-error TS7053
-  d.unit = units[d.unit]
+  if (d.unit) d.unit = units[d.unit]
   // @ts-expect-error TS7053
-  d.method = methods[d.method]
+  if (d.method) d.method = methods[d.method]
   return d
 }
 </script>
