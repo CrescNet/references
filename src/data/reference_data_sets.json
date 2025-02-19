@@ -1279,7 +1279,7 @@
         },
         {
           "disease": "@noonan_syndrome",
-          "feature": "@body_height",
+          "feature": "@body_weight",
           "region": "@japan",
           "unit": "@kg",
           "method": "@lms",
@@ -1303,7 +1303,7 @@
         },
         {
           "disease": "@noonan_syndrome",
-          "feature": "@body_height",
+          "feature": "@bmi",
           "region": "@japan",
           "unit": "@kg/m2",
           "method": "@lms",
@@ -1326,12 +1326,216 @@
           }
         }
       ]
+    },
+    {
+      "name": "Zemel",
+      "year": 2015,
+      "url": "https://doi.org/10.1542/peds.2015-1652",
+      "citation": "B.S. Zemel, M. Pipan, V.A. Stallings, W. Hall, K. Schadt, D.S. Freedman, P. Thorpe: Growth Charts for Children with Down Syndrome in the U.S. Pediatrics; October 2015. https://doi.org/10.1542/peds.2015-1652.",
+      "dataSets": [
+        {
+          "disease": "@down_syndrome",
+          "feature": "@body_length",
+          "region": "@usa",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 1,
+              "max": 36,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9924078/bin/PEDS_20151652SupplementaryData.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@down_syndrome",
+          "feature": "@body_height",
+          "region": "@usa",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 2,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9924078/bin/PEDS_20151652SupplementaryData.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@down_syndrome",
+          "feature": "@body_weight",
+          "region": "@usa",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 36,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9924078/bin/PEDS_20151652SupplementaryData.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@down_syndrome",
+          "feature": "@body_weight",
+          "region": "@usa",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 2,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9924078/bin/PEDS_20151652SupplementaryData.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@down_syndrome",
+          "feature": "@body_weight_for_length",
+          "region": "@usa",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@body_length",
+              "min": 49,
+              "max": 93,
+              "unit": "@cm"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9924078/bin/PEDS_20151652SupplementaryData.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@down_syndrome",
+          "feature": "@bmi",
+          "region": "@usa",
+          "unit": "@kg/m2",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 2,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9924078/bin/PEDS_20151652SupplementaryData.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@down_syndrome",
+          "feature": "@head_circumference",
+          "region": "@usa",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 1,
+              "max": 36,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9924078/bin/PEDS_20151652SupplementaryData.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@down_syndrome",
+          "feature": "@head_circumference",
+          "region": "@usa",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 2,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9924078/bin/PEDS_20151652SupplementaryData.pdf",
+            "access": "public"
+          }
+        }
+      ]
     }
   ],
   "diseases": {
     "@achondroplasia": {
       "name": "Achondroplasia",
       "iri": "http://purl.obolibrary.org/obo/DOID_4480"
+    },
+    "@down_syndrome": {
+      "name": "Down syndrome",
+      "iri": "http://purl.obolibrary.org/obo/DOID_14250"
     },
     "@hypochondroplasia": {
       "name": "Hypochondroplasia",
@@ -1347,6 +1551,10 @@
     }
   },
   "regions": {
+    "@usa": {
+      "name": "United States of America",
+      "iri": "http://id.nlm.nih.gov/mesh/D014481"
+    },
     "@europe": {
       "name": "Europe",
       "iri": "http://id.nlm.nih.gov/mesh/D005060"
