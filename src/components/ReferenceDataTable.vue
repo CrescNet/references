@@ -2,7 +2,6 @@
 import { computed, ref } from 'vue'
 import { FlagIcon, LockClosedIcon, LockOpenIcon, NoSymbolIcon } from '@heroicons/vue/16/solid'
 import {
-  dataSets,
   diseases,
   features,
   methods,
@@ -13,7 +12,15 @@ import {
 import TermRef from './TermRef.vue'
 import SetFilter from './SetFilter.vue'
 
-const data = computed(() => dataSets.map(populateReferences))
+const data = computed(() =>
+  publications.flatMap((p) =>
+    p.dataSets?.map((d) => {
+      const dataSet = populateReferences(d)
+      dataSet.publication = p
+      return dataSet
+    }),
+  ),
+)
 
 const filters = ref({
   publication: { value: '', keys: ['publication.name'] },
@@ -31,8 +38,6 @@ function publicationByYear(row: { publication: { name: string; year: number } })
 // @ts-expect-error TS7053
 function populateReferences(dataSet) {
   const d = { ...dataSet }
-  // @ts-expect-error TS7053
-  if (d.publication) d.publication = publications[d.publication]
   // @ts-expect-error TS7053
   if (d.disease) d.disease = diseases[d.disease]
   // @ts-expect-error TS7053
@@ -53,6 +58,15 @@ function populateReferences(dataSet) {
   if (d.method) d.method = methods[d.method]
   return d
 }
+
+function deriveRowspan(rows: [], key: string, i: number) {
+  const row = rows[i]
+  let count = 1
+  while (i + count < rows.length && rows[i + count][key] == row[key]) {
+    count++
+  }
+  return count
+}
 </script>
 
 <template>
@@ -60,11 +74,11 @@ function populateReferences(dataSet) {
     <v-table :data="data" :filters="filters" class="table table-zebra table-xs table-pin-rows">
       <template #head>
         <tr class="bg-base-300 primary-header">
+          <v-th sort-key="disease.name" class="select-none">Disease</v-th>
+          <v-th sort-key="region.name" class="select-none">Region</v-th>
           <v-th :sort-key="publicationByYear" default-sort="desc" class="select-none"
             >Publication</v-th
           >
-          <v-th sort-key="disease.name" class="select-none">Disease</v-th>
-          <v-th sort-key="region.name" class="select-none">Region</v-th>
           <v-th sort-key="feature.name" class="select-none">Feature</v-th>
           <v-th sort-key="unit.name" class="select-none">Unit</v-th>
           <v-th sort-key="method.abbreviation" class="select-none">Method</v-th>
@@ -73,13 +87,13 @@ function populateReferences(dataSet) {
           <th></th>
         </tr>
         <tr class="bg-base-300 secondary-header">
-          <td><input v-model="filters.publication.value" type="text" class="input input-xs" /></td>
           <td>
             <set-filter v-model="filters.disease.value" :options="data.flatMap((u) => u.disease)" />
           </td>
           <td>
             <set-filter v-model="filters.region.value" :options="data.flatMap((u) => u.region)" />
           </td>
+          <td><input v-model="filters.publication.value" type="text" class="input input-xs" /></td>
           <td>
             <set-filter v-model="filters.feature.value" :options="data.flatMap((u) => u.feature)" />
           </td>
@@ -99,7 +113,22 @@ function populateReferences(dataSet) {
       </template>
       <template #body="{ rows }">
         <tr v-for="(row, i) in rows" :key="i">
-          <td>
+          <td
+            v-show="i == 0 || row.disease != rows[i - 1].disease"
+            :rowspan="deriveRowspan(rows, 'disease', i)"
+          >
+            <term-ref :term="row.disease" />
+          </td>
+          <td
+            v-show="i == 0 || row.region != rows[i - 1].region"
+            :rowspan="deriveRowspan(rows, 'region', i)"
+          >
+            <term-ref :term="row.region" />
+          </td>
+          <td
+            v-show="i == 0 || row.publication != rows[i - 1].publication"
+            :rowspan="deriveRowspan(rows, 'publication', i)"
+          >
             <a
               :href="row.publication?.url"
               target="_blank"
@@ -110,9 +139,9 @@ function populateReferences(dataSet) {
               {{ row.publication?.year }}
             </a>
           </td>
-          <td><term-ref :term="row.disease" /></td>
-          <td><term-ref :term="row.region" /></td>
-          <td><term-ref :term="row.feature" /></td>
+          <td>
+            <term-ref :term="row.feature" />
+          </td>
           <td><term-ref :term="row.unit" /></td>
           <td>
             <term-ref v-if="row.method" :term="row.method" />
@@ -173,6 +202,12 @@ function populateReferences(dataSet) {
 <style lang="css">
 th.v-th svg {
   display: inline;
+}
+</style>
+
+<style lang="css" scoped>
+table tbody td {
+  @apply align-top;
 }
 .primary-header {
   box-shadow: inset 0 -5px 0 0 var(--color-base-300);
