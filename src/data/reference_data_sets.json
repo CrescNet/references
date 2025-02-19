@@ -59,9 +59,25 @@
       "year": 2021,
       "url": "https://doi.org/10.1016/j.eclinm.2021.100977",
       "citation": "Kempf E, Vogel M, Vogel T, Kratzsch J, Landgraf K, Kühnapfel A, et al. Dynamic alterations in linear growth and endocrine parameters in children with obesity and height reference values. EClinicalMedicine 2021:100977. https://doi.org/10.1016/j.eclinm.2021.100977."
+    },
+    "@merker_2018": {
+      "name": "Merker",
+      "year": 2018,
+      "url": "https://doi.org/10.1002/ajmg.a.38853",
+      "citation": "Merker A, Neumeyer L, Hertel NT, Grigelioniene G, Mäkitie O, Mohnike K, et al. Growth in achondroplasia: Development of height, weight, head circumference, and body mass index in a European cohort. Am J Med Genet Part A 2018;176:1723–34. https://doi.org/10.1002/ajmg.a.38853."
+    },
+    "@merker_2019": {
+      "name": "Merker",
+      "year": 2019,
+      "url": "https://doi.org/10.1002/ajmg.a.40356",
+      "citation": "Merker A, Neumeyer L, Hertel NT, Grigelioniene G, Mohnike K, Hagenäs L. Development of body proportions in achondroplasia: Sitting height, leg length, arm span, and foot length. Am J Med Genet A 2018;176:1819–29. https://doi.org/10.1002/ajmg.a.40356."
     }
   },
   "diseases": {
+    "@achondroplasia": {
+      "name": "Achondroplasia",
+      "iri": "http://purl.obolibrary.org/obo/DOID_4480"
+    },
     "@hypochondroplasia": {
       "name": "Hypochondroplasia",
       "iri": "http://purl.obolibrary.org/obo/DOID_0080041"
@@ -72,6 +88,10 @@
     }
   },
   "regions": {
+    "@europe": {
+      "name": "Europe",
+      "iri": "http://id.nlm.nih.gov/mesh/D005060"
+    },
     "@germany": {
       "name": "Germany",
       "iri": "http://id.nlm.nih.gov/mesh/D005858"
@@ -153,6 +173,13 @@
     "@waist_to_height_ratio": {
       "name": "Waist-to-height-ratio",
       "iri": "http://snomed.info/sct/1251557006"
+    },
+    "@arm_span": {
+      "name": "Arm span",
+      "iri": "https://loinc.org/56116-7"
+    },
+    "@food_length": {
+      "name": "Food length"
     }
   },
   "units": {
@@ -1018,6 +1045,230 @@
       "dataSet": {
         "format": "XLSX",
         "source": "https://ars.els-cdn.com/content/image/1-s2.0-S2589537021002571-mmc3.xlsx",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@merker_2018",
+      "disease": "@achondroplasia",
+      "feature": "@body_height",
+      "region": "@europe",
+      "unit": "@cm",
+      "method": "@norm",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 0,
+          "max": 20,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "PDF",
+        "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.38853&file=ajmga38853-sup-0001-AppendixS1.pdf",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@merker_2018",
+      "disease": "@achondroplasia",
+      "feature": "@body_weight",
+      "region": "@europe",
+      "unit": "@kg",
+      "method": "@lms",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 0,
+          "max": 20,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "PDF",
+        "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.38853&file=ajmga38853-sup-0001-AppendixS1.pdf",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@merker_2018",
+      "disease": "@achondroplasia",
+      "feature": "@bmi",
+      "region": "@europe",
+      "unit": "@kg/m2",
+      "method": "@lms",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 0,
+          "max": 20,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "PDF",
+        "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.38853&file=ajmga38853-sup-0001-AppendixS1.pdf",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@merker_2018",
+      "disease": "@achondroplasia",
+      "feature": "@head_circumference",
+      "region": "@europe",
+      "unit": "@cm",
+      "method": "@norm",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 0,
+          "max": 20,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "PDF",
+        "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.38853&file=ajmga38853-sup-0001-AppendixS1.pdf",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@merker_2019",
+      "disease": "@achondroplasia",
+      "feature": "@sitting_height",
+      "region": "@europe",
+      "unit": "@cm",
+      "method": "@norm",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 2,
+          "max": 20,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "PDF",
+        "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.40356&file=ajmga40356-sup-0001-supinfo01.pdf",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@merker_2019",
+      "disease": "@achondroplasia",
+      "feature": "@leg_length",
+      "region": "@europe",
+      "unit": "@cm",
+      "method": "@norm",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 2,
+          "max": 20,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "PDF",
+        "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.40356&file=ajmga40356-sup-0001-supinfo01.pdf",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@merker_2019",
+      "disease": "@achondroplasia",
+      "feature": "@arm_span",
+      "region": "@europe",
+      "unit": "@cm",
+      "method": "@norm",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 2,
+          "max": 20,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "PDF",
+        "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.40356&file=ajmga40356-sup-0001-supinfo01.pdf",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@merker_2019",
+      "disease": "@achondroplasia",
+      "feature": "@sitting_height_to_height_ratio",
+      "region": "@europe",
+      "method": "@norm",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 2,
+          "max": 20,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "PDF",
+        "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.40356&file=ajmga40356-sup-0001-supinfo01.pdf",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@merker_2019",
+      "disease": "@achondroplasia",
+      "feature": "@food_length",
+      "unit": "@cm",
+      "region": "@europe",
+      "method": "@norm",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 3,
+          "max": 20,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "PDF",
+        "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.40356&file=ajmga40356-sup-0001-supinfo01.pdf",
         "access": "public"
       }
     }
