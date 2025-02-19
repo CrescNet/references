@@ -134,7 +134,7 @@ function deriveRowspan(rows: [], key: string, i: number) {
             <a
               :href="row.publication?.url"
               target="_blank"
-              class="tooltip tooltip-right"
+              class="tooltip tooltip-right hover:bg-base-300 rounded p-px"
               :data-tip="row.publication?.citation"
             >
               {{ row.publication?.name }}
