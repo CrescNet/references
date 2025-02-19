@@ -73,7 +73,7 @@ function deriveRowspan(rows: [], key: string, i: number) {
   <div class="overflow-y-auto rounded-box border border-base-content/10 bg-base-100">
     <v-table :data="data" :filters="filters" class="table table-zebra table-xs table-pin-rows">
       <template #head>
-        <tr class="bg-base-300 primary-header">
+        <tr class="bg-base-300 primary-header text-lg">
           <v-th sort-key="disease.name" class="select-none">Disease</v-th>
           <v-th sort-key="region.name" class="select-none">Region</v-th>
           <v-th :sort-key="publicationByYear" default-sort="desc" class="select-none"
@@ -116,12 +116,14 @@ function deriveRowspan(rows: [], key: string, i: number) {
           <td
             v-show="i == 0 || row.disease != rows[i - 1].disease"
             :rowspan="deriveRowspan(rows, 'disease', i)"
+            class="text-base"
           >
             <term-ref :term="row.disease" />
           </td>
           <td
             v-show="i == 0 || row.region != rows[i - 1].region"
             :rowspan="deriveRowspan(rows, 'region', i)"
+            class="text-base"
           >
             <term-ref :term="row.region" />
           </td>
