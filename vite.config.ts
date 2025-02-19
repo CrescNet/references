@@ -20,5 +20,8 @@ export default defineConfig({
   server: {
     host: '127.0.0.1'
   },
-  base: "/references"
+  base: '/references',
+  define: {
+    '__APP_VERSION__': JSON.stringify(process.env.npm_package_version)
+  }
 })

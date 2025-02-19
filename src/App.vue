@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { PlusIcon } from '@heroicons/vue/16/solid'
 import ReferenceDataTable from './components/ReferenceDataTable.vue'
+
+const version = __APP_VERSION__
 </script>
 
 <template>
@@ -15,7 +17,7 @@ import ReferenceDataTable from './components/ReferenceDataTable.vue'
       <div class="flex flex-1 justify-end">
         <div class="flex items-stretch">
           <a href="https://crescnet.org/" target="_blank" tabindex="0" class="btn btn-ghost"
-            >CrescNet</a
+            >About CrescNet</a
           >
           <a
             href="https://github.com/CrescNet/references/"
@@ -80,8 +82,9 @@ import ReferenceDataTable from './components/ReferenceDataTable.vue'
   </main>
 
   <footer
-    class="flex-auto footer footer-horizontal footer-center bg-base-300 text-base-content p-2"
+    class="flex-auto footer footer-horizontal justify-between bg-base-300 text-base-content px-4 py-2"
   >
-    <p>Copyright © {{ new Date().getFullYear() }} - CrescNet</p>
+    <p>Copyright © {{ new Date().getFullYear() }} - CrescNet, Leipzig University</p>
+    <p>v{{ version }}</p>
   </footer>
 </template>
