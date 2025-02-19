@@ -184,7 +184,8 @@ function deriveRowspan(rows: [], key: string, i: number) {
             <a
               :href="`https://github.com/CrescNet/references/issues/new?template=update_reference_data.md&title=Update+${row.publication?.name}+${row.publication?.year}+${row.feature?.name}`"
               target="_blank"
-              class="tooltip tooltip-left inline"
+              role="button"
+              class="btn btn-xs tooltip tooltip-left inline-flex"
               data-tip="Report an issue about this data set."
               ><flag-icon class="size-3 text-yellow-500"
             /></a>
