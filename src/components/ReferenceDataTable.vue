@@ -2,7 +2,6 @@
 import { computed, ref } from 'vue'
 import { FlagIcon, LockClosedIcon, LockOpenIcon, NoSymbolIcon } from '@heroicons/vue/16/solid'
 import {
-  dataSets,
   diseases,
   features,
   methods,
@@ -13,10 +12,18 @@ import {
 import TermRef from './TermRef.vue'
 import SetFilter from './SetFilter.vue'
 
-const data = computed(() => dataSets.map(populateReferences))
+const data = computed(() =>
+  publications.flatMap((p) =>
+    p.dataSets?.map((d) => {
+      const dataSet = populateReferences(d)
+      dataSet.publication = p
+      return dataSet
+    }),
+  ),
+)
 
 const filters = ref({
-  publication: { value: '', keys: ['publication.name'] },
+  publication: { value: '', keys: ['publication.name', 'publication.year'] },
   disease: { value: undefined, keys: ['disease.iri'] },
   region: { value: undefined, keys: ['region.iri'] },
   feature: { value: undefined, keys: ['feature.iri'] },
@@ -31,8 +38,6 @@ function publicationByYear(row: { publication: { name: string; year: number } })
 // @ts-expect-error TS7053
 function populateReferences(dataSet) {
   const d = { ...dataSet }
-  // @ts-expect-error TS7053
-  if (d.publication) d.publication = publications[d.publication]
   // @ts-expect-error TS7053
   if (d.disease) d.disease = diseases[d.disease]
   // @ts-expect-error TS7053
@@ -53,18 +58,27 @@ function populateReferences(dataSet) {
   if (d.method) d.method = methods[d.method]
   return d
 }
+
+function deriveRowspan(rows: [], key: string, i: number) {
+  const row = rows[i]
+  let count = 1
+  while (i + count < rows.length && rows[i + count][key] == row[key]) {
+    count++
+  }
+  return count
+}
 </script>
 
 <template>
   <div class="overflow-y-auto rounded-box border border-base-content/10 bg-base-100">
     <v-table :data="data" :filters="filters" class="table table-zebra table-xs table-pin-rows">
       <template #head>
-        <tr class="bg-base-300 primary-header">
+        <tr class="bg-base-300 primary-header text-lg">
+          <v-th sort-key="disease.name" class="select-none">Disease</v-th>
+          <v-th sort-key="region.name" class="select-none">Region</v-th>
           <v-th :sort-key="publicationByYear" default-sort="desc" class="select-none"
             >Publication</v-th
           >
-          <v-th sort-key="disease.name" class="select-none">Disease</v-th>
-          <v-th sort-key="region.name" class="select-none">Region</v-th>
           <v-th sort-key="feature.name" class="select-none">Feature</v-th>
           <v-th sort-key="unit.name" class="select-none">Unit</v-th>
           <v-th sort-key="method.abbreviation" class="select-none">Method</v-th>
@@ -72,14 +86,14 @@ function populateReferences(dataSet) {
           <v-th sort-key="dataSet.format" class="select-none">Data set</v-th>
           <th></th>
         </tr>
-        <tr class="bg-base-300 secondary-header">
-          <td><input v-model="filters.publication.value" type="text" class="input input-xs" /></td>
+        <tr class="bg-base-300 top-[36.5px]">
           <td>
             <set-filter v-model="filters.disease.value" :options="data.flatMap((u) => u.disease)" />
           </td>
           <td>
             <set-filter v-model="filters.region.value" :options="data.flatMap((u) => u.region)" />
           </td>
+          <td><input v-model="filters.publication.value" type="text" class="input input-xs" /></td>
           <td>
             <set-filter v-model="filters.feature.value" :options="data.flatMap((u) => u.feature)" />
           </td>
@@ -99,20 +113,37 @@ function populateReferences(dataSet) {
       </template>
       <template #body="{ rows }">
         <tr v-for="(row, i) in rows" :key="i">
-          <td>
+          <td
+            v-show="i == 0 || row.disease != rows[i - 1].disease"
+            :rowspan="deriveRowspan(rows, 'disease', i)"
+            class="text-base"
+          >
+            <term-ref :term="row.disease" />
+          </td>
+          <td
+            v-show="i == 0 || row.region != rows[i - 1].region"
+            :rowspan="deriveRowspan(rows, 'region', i)"
+            class="text-base"
+          >
+            <term-ref :term="row.region" />
+          </td>
+          <td
+            v-show="i == 0 || row.publication != rows[i - 1].publication"
+            :rowspan="deriveRowspan(rows, 'publication', i)"
+          >
             <a
               :href="row.publication?.url"
               target="_blank"
-              class="tooltip tooltip-right"
+              class="tooltip tooltip-right hover:bg-base-300 rounded p-px"
               :data-tip="row.publication?.citation"
             >
               {{ row.publication?.name }}
               {{ row.publication?.year }}
             </a>
           </td>
-          <td><term-ref :term="row.disease" /></td>
-          <td><term-ref :term="row.region" /></td>
-          <td><term-ref :term="row.feature" /></td>
+          <td>
+            <term-ref :term="row.feature" />
+          </td>
           <td><term-ref :term="row.unit" /></td>
           <td>
             <term-ref v-if="row.method" :term="row.method" />
@@ -130,8 +161,11 @@ function populateReferences(dataSet) {
             </div>
           </td>
           <td>
-            <div
-              class="tooltip"
+            <a
+              v-if="row.dataSet && row.dataSet.access !== 'on request'"
+              role="button"
+              class="btn btn-xs tooltip inline-flex"
+              :href="row.dataSet.source"
               :data-tip="
                 row.dataSet.access === 'public'
                   ? 'Public'
@@ -140,26 +174,18 @@ function populateReferences(dataSet) {
                     : 'On request to authors'
               "
             >
-              <lock-open-icon v-show="row.dataSet.access === 'public'" class="inline size-3 mr-1" />
-              <lock-closed-icon
-                v-show="row.dataSet.access === 'restricted'"
-                class="inline size-3 mr-1"
-              />
-              <no-symbol-icon
-                v-show="row.dataSet.access === 'on request'"
-                class="inline size-3 mr-1"
-              />
-              <term-ref
-                v-if="row.dataSet"
-                :term="{ name: row.dataSet.format, iri: row.dataSet.source }"
-              />
-            </div>
+              <lock-open-icon v-show="row.dataSet.access === 'public'" class="size-3 mr-1" />
+              <lock-closed-icon v-show="row.dataSet.access === 'restricted'" class="size-3 mr-1" />
+              {{ row.dataSet.format }}
+            </a>
+            <no-symbol-icon v-else class="size-3" />
           </td>
           <td>
             <a
               :href="`https://github.com/CrescNet/references/issues/new?template=update_reference_data.md&title=Update+${row.publication?.name}+${row.publication?.year}+${row.feature?.name}`"
               target="_blank"
-              class="tooltip tooltip-left inline"
+              role="button"
+              class="btn btn-xs tooltip tooltip-left inline-flex"
               data-tip="Report an issue about this data set."
               ><flag-icon class="size-3 text-yellow-500"
             /></a>
@@ -174,10 +200,13 @@ function populateReferences(dataSet) {
 th.v-th svg {
   display: inline;
 }
+</style>
+
+<style lang="css" scoped>
+table tbody td {
+  @apply align-top;
+}
 .primary-header {
   box-shadow: inset 0 -5px 0 0 var(--color-base-300);
-}
-.secondary-header {
-  top: 29.5px;
 }
 </style>

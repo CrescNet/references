@@ -1,56 +1,1564 @@
 {
-  "publications": {
-    "@kromeyer_hauschild_2015": {
+  "publications": [
+    {
       "name": "Kromeyer-Hauschild",
       "year": 2015,
       "url": "https://doi.org/10.3109/17477166.2010.490267",
-      "citation": "Kromeyer-Hauschild K, Dortschy R, Stolzenberg H, Neuhauser H, Rosario AS. Nationally representative waist circumference percentiles in German adolescents aged 11.0–18.0 years. International Journal of Pediatric Obesity 2011;6:e129–37. https://doi.org/10.3109/17477166.2010.490267."
+      "citation": "Kromeyer-Hauschild K, Dortschy R, Stolzenberg H, Neuhauser H, Rosario AS. Nationally representative waist circumference percentiles in German adolescents aged 11.0–18.0 years. International Journal of Pediatric Obesity 2011;6:e129–37. https://doi.org/10.3109/17477166.2010.490267.",
+      "dataSets": [
+        {
+          "region": "@germany",
+          "sex": ["female", "male"],
+          "feature": "@waist_circumference",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 18,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "CSV",
+            "source": "https://www.tandfonline.com/action/downloadTable?id=T0002&doi=10.3109%2F17477166.2010.490267&downloadType=CSV",
+            "access": "public"
+          }
+        }
+      ]
     },
-    "@kromeyer_hauschild_2011": {
+    {
       "name": "Kromeyer-Hauschild",
       "year": 2001,
       "url": "https://doi.org/10.1007/s001120170107",
-      "citation": "Kromeyer-Hauschild K, Wabitsch M, Kunze D, Geller F, Geiß HC, Hesse V, et al. Perzentile für den Body-mass-Index für das Kindes- und Jugendalter unter Heranziehung verschiedener deutscher Stichproben. Monatsschr Kinderheilkd 2001;149:807–18. https://doi.org/10.1007/s001120170107."
+      "citation": "Kromeyer-Hauschild K, Wabitsch M, Kunze D, Geller F, Geiß HC, Hesse V, et al. Perzentile für den Body-mass-Index für das Kindes- und Jugendalter unter Heranziehung verschiedener deutscher Stichproben. Monatsschr Kinderheilkd 2001;149:807–18. https://doi.org/10.1007/s001120170107.",
+      "dataSets": [
+        {
+          "region": "@germany",
+          "feature": "@body_height",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 18,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "CSV",
+            "source": "https://link.springer.com/content/pdf/10.1007/s001120170107.pdf",
+            "access": "restricted"
+          }
+        },
+        {
+          "region": "@germany",
+          "feature": "@body_weight",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 18,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "CSV",
+            "source": "https://link.springer.com/content/pdf/10.1007/s001120170107.pdf",
+            "access": "restricted"
+          }
+        },
+        {
+          "region": "@germany",
+          "feature": "@bmi",
+          "unit": "@kg/m2",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 18,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "CSV",
+            "source": "https://link.springer.com/content/pdf/10.1007/s001120170107.pdf",
+            "access": "restricted"
+          }
+        }
+      ]
     },
-    "@cheung_2023": {
+    {
       "name": "Cheung",
       "year": 2023,
       "url": "https://doi.org/10.1002/ajmg.a.63431",
-      "citation": "Cheung MS, Cole TJ, Arundel P, Bridges N, Burren CP, Cole T, et al. Growth reference charts for children with hypochondroplasia. American J of Med Genetics Pt A 2024;194:243–52. https://doi.org/10.1002/ajmg.a.63431."
+      "citation": "Cheung MS, Cole TJ, Arundel P, Bridges N, Burren CP, Cole T, et al. Growth reference charts for children with hypochondroplasia. American J of Med Genetics Pt A 2024;194:243–52. https://doi.org/10.1002/ajmg.a.63431.",
+      "dataSets": [
+        {
+          "disease": "@hypochondroplasia",
+          "feature": "@body_height",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 16,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "access": "on request"
+          }
+        },
+        {
+          "disease": "@hypochondroplasia",
+          "feature": "@body_weight",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 16,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "access": "on request"
+          }
+        },
+        {
+          "disease": "@hypochondroplasia",
+          "feature": "@head_circumference",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 16,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "access": "on request"
+          }
+        }
+      ]
     },
-    "@voigt_2006": {
+    {
       "name": "Voigt",
       "year": 2006,
       "url": "https://doi.org/10.1055/s-2006-924458",
-      "citation": "Voigt M, Fusch C, Olbertz D, Hartmann K, Rochow N, Renken C, et al. Analyse des Neugeborenenkollektivs der Bundesrepublik Deutschland. Geburtsh Frauenheilk 2006;66:956–70. https://doi.org/10.1055/s-2006-924458."
+      "citation": "Voigt M, Fusch C, Olbertz D, Hartmann K, Rochow N, Renken C, et al. Analyse des Neugeborenenkollektivs der Bundesrepublik Deutschland. Geburtsh Frauenheilk 2006;66:956–70. https://doi.org/10.1055/s-2006-924458.",
+      "dataSets": [
+        {
+          "region": "@germany",
+          "feature": "@body_length",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@gestational_age",
+              "min": 20,
+              "max": 43,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-2006-924458.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "region": "@germany",
+          "feature": "@body_weight",
+          "unit": "@kg",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@gestational_age",
+              "min": 20,
+              "max": 43,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-2006-924458.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "region": "@germany",
+          "feature": "@head_circumference",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@gestational_age",
+              "min": 20,
+              "max": 43,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-2006-924458.pdf",
+            "access": "public"
+          }
+        }
+      ]
     },
-    "@areas_2018": {
+    {
       "name": "Areas",
       "year": 2018,
       "url": "https://doi.org/10.1515/jpem-2018-0046",
-      "citation": "Arenas MA, del Pino M, Fano V. FGFR3-related hypochondroplasia: longitudinal growth in 57 children with the p.Asn540Lys mutation. JPEM 2018;31:1279–84. https://doi.org/10.1515/jpem-2018-0046."
+      "citation": "Arenas MA, del Pino M, Fano V. FGFR3-related hypochondroplasia: longitudinal growth in 57 children with the p.Asn540Lys mutation. JPEM 2018;31:1279–84. https://doi.org/10.1515/jpem-2018-0046.",
+      "dataSets": [
+        {
+          "disease": "@hypochondroplasia",
+          "feature": "@body_height",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 17,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "DOC",
+            "source": "https://www.degruyter.com/document/doi/10.1515/jpem-2018-0046/downloadAsset/suppl/jpem-2018-0046_suppl.zip",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@hypochondroplasia",
+          "feature": "@leg_length",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 17,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "DOC",
+            "source": "https://www.degruyter.com/document/doi/10.1515/jpem-2018-0046/downloadAsset/suppl/jpem-2018-0046_suppl.zip",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@hypochondroplasia",
+          "feature": "@sitting_height",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 17,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "DOC",
+            "source": "https://www.degruyter.com/document/doi/10.1515/jpem-2018-0046/downloadAsset/suppl/jpem-2018-0046_suppl.zip",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@hypochondroplasia",
+          "feature": "@sitting_height_to_height_ratio",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 17,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "DOC",
+            "source": "https://www.degruyter.com/document/doi/10.1515/jpem-2018-0046/downloadAsset/suppl/jpem-2018-0046_suppl.zip",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@hypochondroplasia",
+          "feature": "@sitting_height_to_leg_length_ratio",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 17,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "DOC",
+            "source": "https://www.degruyter.com/document/doi/10.1515/jpem-2018-0046/downloadAsset/suppl/jpem-2018-0046_suppl.zip",
+            "access": "public"
+          }
+        }
+      ]
     },
-
-    "@redlefsen_2007": {
+    {
       "name": "Redlefsen",
       "year": 2007,
       "url": "https://doi.org/10.1127/anthranz/65/2007/263",
-      "citation": "Redlefsen T, Commentz J, Meigen C, Hermanussen M. Reference values for height, weight and body mass index of German born Turkish children. Anthropologischer Anzeiger 2007;65:263–74. https://doi.org/10.1127/anthranz/65/2007/263."
+      "citation": "Redlefsen T, Commentz J, Meigen C, Hermanussen M. Reference values for height, weight and body mass index of German born Turkish children. Anthropologischer Anzeiger 2007;65:263–74. https://doi.org/10.1127/anthranz/65/2007/263.",
+      "dataSets": [
+        {
+          "region": "@germany",
+          "feature": "@body_height",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 18,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://d-nb.info/990166104/34",
+            "access": "public"
+          }
+        },
+        {
+          "region": "@germany",
+          "feature": "@body_weight",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 18,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://d-nb.info/990166104/34",
+            "access": "public"
+          }
+        },
+        {
+          "region": "@germany",
+          "feature": "@bmi",
+          "unit": "@kg/m2",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 1,
+              "max": 18,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://d-nb.info/990166104/34",
+            "access": "public"
+          }
+        }
+      ]
     },
-    "@fredriks_2005": {
+    {
       "name": "Fredriks",
       "year": "2005",
       "url": "https://doi.org/10.1136/adc.2004.050799",
-      "citation": "Fredriks AM. Nationwide age references for sitting height, leg length, and sitting height/height ratio, and their diagnostic value for disproportionate growth disorders. Archives of Disease in Childhood 2005;90:807–12. https://doi.org/10.1136/adc.2004.050799."
+      "citation": "Fredriks AM. Nationwide age references for sitting height, leg length, and sitting height/height ratio, and their diagnostic value for disproportionate growth disorders. Archives of Disease in Childhood 2005;90:807–12. https://doi.org/10.1136/adc.2004.050799.",
+      "dataSets": [
+        {
+          "region": "@netherlands",
+          "feature": "@leg_length",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0.25,
+              "max": 21,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://adc.bmj.com/content/archdischild/90/8/807.full.pdf",
+            "access": "restricted"
+          }
+        },
+        {
+          "region": "@netherlands",
+          "feature": "@sitting_height",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0.25,
+              "max": 21,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://adc.bmj.com/content/archdischild/90/8/807.full.pdf",
+            "access": "restricted"
+          }
+        },
+        {
+          "region": "@netherlands",
+          "feature": "@sitting_height_to_height_ratio",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0.25,
+              "max": 21,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://adc.bmj.com/content/archdischild/90/8/807.full.pdf",
+            "access": "restricted"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Zong",
+      "year": 2013,
+      "url": "https://doi.org/10.1371/journal.pone.0059569",
+      "citation": "Zong X-N, Li H. Construction of a New Growth References for China Based on Urban Chinese Children: Comparison with the WHO Growth Standards. PLoS ONE 2013;8:e59569. https://doi.org/10.1371/journal.pone.0059569.",
+      "dataSets": [
+        {
+          "region": "@china",
+          "feature": "@body_height",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 216,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "PNG",
+            "source": "https://journals.plos.org/plosone/article/figure/image?size=large&download=&id=10.1371/journal.pone.0059569.t003",
+            "access": "public"
+          }
+        },
+        {
+          "region": "@china",
+          "feature": "@body_weight",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 216,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "PNG",
+            "source": "https://journals.plos.org/plosone/article/figure/image?size=large&download=&id=10.1371/journal.pone.0059569.t002",
+            "access": "public"
+          }
+        },
+        {
+          "region": "@china",
+          "feature": "@head_circumference",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 72,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "PNG",
+            "source": "https://journals.plos.org/plosone/article/figure/image?size=large&download=&id=10.1371/journal.pone.0059569.t004",
+            "access": "public"
+          }
+        },
+        {
+          "region": "@china",
+          "feature": "@bmi",
+          "unit": "@kg/m2",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 216,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "PNG",
+            "source": "https://journals.plos.org/plosone/article/figure/image?size=large&download=&id=10.1371/journal.pone.0059569.t007",
+            "access": "public"
+          }
+        },
+        {
+          "region": "@china",
+          "feature": "@body_weight_for_length",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@body_length",
+              "min": 65,
+              "max": 125,
+              "unit": "@cm"
+            }
+          ],
+          "dataSet": {
+            "format": "PNG",
+            "source": "https://journals.plos.org/plosone/article/figure/image?size=large&download=&id=10.1371/journal.pone.0059569.t005",
+            "access": "public"
+          }
+        },
+        {
+          "region": "@china",
+          "feature": "@body_weight_for_height",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@body_height",
+              "min": 65,
+              "max": 125,
+              "unit": "@cm"
+            }
+          ],
+          "dataSet": {
+            "format": "PNG",
+            "source": "https://journals.plos.org/plosone/article/figure/image?size=large&download=&id=10.1371/journal.pone.0059569.t006",
+            "access": "public"
+          }
+        }
+      ]
+    },
+    {
+      "name": "KiGGS",
+      "year": 2011,
+      "url": "https://doi.org/10.25646/3179",
+      "citation": "Neuhauser H, Schienkiewitz A, Rosario AS, Dortschy R, Kurth B-M. Referenzperzentile für anthropometrische Maßzahlen und Blutdruck aus der Studie zur Gesundheit von Kindern und Jugendlichen in Deutschland (KiGGS). Robert Koch-Institut; 2013. https://doi.org/10.25646/3179.",
+      "dataSets": [
+        {
+          "region": "@germany",
+          "feature": "@body_height",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 18,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://edoc.rki.de/bitstream/handle/176904/3254/28jWMa04ZjppM.pdf?sequence=1&isAllowed=y",
+            "access": "public"
+          }
+        },
+        {
+          "region": "@germany",
+          "feature": "@body_weight",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 18,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://edoc.rki.de/bitstream/handle/176904/3254/28jWMa04ZjppM.pdf?sequence=1&isAllowed=y",
+            "access": "public"
+          }
+        },
+        {
+          "region": "@germany",
+          "feature": "@bmi",
+          "unit": "@kg/m2",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0.333,
+              "max": 18,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://edoc.rki.de/bitstream/handle/176904/3254/28jWMa04ZjppM.pdf?sequence=1&isAllowed=y",
+            "access": "public"
+          }
+        },
+        {
+          "region": "@germany",
+          "feature": "@waist_circumference",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 11,
+              "max": 18,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://edoc.rki.de/bitstream/handle/176904/3254/28jWMa04ZjppM.pdf?sequence=1&isAllowed=y",
+            "access": "public"
+          }
+        },
+        {
+          "region": "@germany",
+          "feature": "@hip_circumference",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 11,
+              "max": 18,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://edoc.rki.de/bitstream/handle/176904/3254/28jWMa04ZjppM.pdf?sequence=1&isAllowed=y",
+            "access": "public"
+          }
+        },
+        {
+          "region": "@germany",
+          "feature": "@waist_to_hip_ratio",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 11,
+              "max": 18,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://edoc.rki.de/bitstream/handle/176904/3254/28jWMa04ZjppM.pdf?sequence=1&isAllowed=y",
+            "access": "public"
+          }
+        },
+        {
+          "region": "@germany",
+          "feature": "@waist_to_height_ratio",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 11,
+              "max": 18,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://edoc.rki.de/bitstream/handle/176904/3254/28jWMa04ZjppM.pdf?sequence=1&isAllowed=y",
+            "access": "public"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Kempf",
+      "year": 2021,
+      "url": "https://doi.org/10.1016/j.eclinm.2021.100977",
+      "citation": "Kempf E, Vogel M, Vogel T, Kratzsch J, Landgraf K, Kühnapfel A, et al. Dynamic alterations in linear growth and endocrine parameters in children with obesity and height reference values. EClinicalMedicine 2021:100977. https://doi.org/10.1016/j.eclinm.2021.100977.",
+      "dataSets": [
+        {
+          "disease": "@obesity",
+          "region": "@germany",
+          "feature": "@body_height",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 18,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "XLSX",
+            "source": "https://ars.els-cdn.com/content/image/1-s2.0-S2589537021002571-mmc3.xlsx",
+            "access": "public"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Merker",
+      "year": 2018,
+      "url": "https://doi.org/10.1002/ajmg.a.38853",
+      "citation": "Merker A, Neumeyer L, Hertel NT, Grigelioniene G, Mäkitie O, Mohnike K, et al. Growth in achondroplasia: Development of height, weight, head circumference, and body mass index in a European cohort. Am J Med Genet Part A 2018;176:1723–34. https://doi.org/10.1002/ajmg.a.38853.",
+      "dataSets": [
+        {
+          "disease": "@achondroplasia",
+          "feature": "@body_height",
+          "region": "@europe",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.38853&file=ajmga38853-sup-0001-AppendixS1.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@achondroplasia",
+          "feature": "@body_weight",
+          "region": "@europe",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.38853&file=ajmga38853-sup-0001-AppendixS1.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@achondroplasia",
+          "feature": "@bmi",
+          "region": "@europe",
+          "unit": "@kg/m2",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.38853&file=ajmga38853-sup-0001-AppendixS1.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@achondroplasia",
+          "feature": "@head_circumference",
+          "region": "@europe",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.38853&file=ajmga38853-sup-0001-AppendixS1.pdf",
+            "access": "public"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Merker",
+      "year": 2019,
+      "url": "https://doi.org/10.1002/ajmg.a.40356",
+      "citation": "Merker A, Neumeyer L, Hertel NT, Grigelioniene G, Mohnike K, Hagenäs L. Development of body proportions in achondroplasia: Sitting height, leg length, arm span, and foot length. Am J Med Genet A 2018;176:1819–29. https://doi.org/10.1002/ajmg.a.40356.",
+      "dataSets": [
+        {
+          "disease": "@achondroplasia",
+          "feature": "@sitting_height",
+          "region": "@europe",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 2,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.40356&file=ajmga40356-sup-0001-supinfo01.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@achondroplasia",
+          "feature": "@leg_length",
+          "region": "@europe",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 2,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.40356&file=ajmga40356-sup-0001-supinfo01.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@achondroplasia",
+          "feature": "@arm_span",
+          "region": "@europe",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 2,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.40356&file=ajmga40356-sup-0001-supinfo01.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@achondroplasia",
+          "feature": "@sitting_height_to_height_ratio",
+          "region": "@europe",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 2,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.40356&file=ajmga40356-sup-0001-supinfo01.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@achondroplasia",
+          "feature": "@foot_length",
+          "unit": "@cm",
+          "region": "@europe",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 3,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fajmg.a.40356&file=ajmga40356-sup-0001-supinfo01.pdf",
+            "access": "public"
+          }
+        }
+      ]
+    },
+    {
+      "name": "WHO",
+      "year": 2007,
+      "url": "https://doi.org/10.2471/BLT.07.043497",
+      "citation": "de Onis M, Onyango AW, Borghi E, Siyam A, Nishida C, Siekmann J. Development of a WHO growth reference for school-aged children and adolescents. Bull World Health Organ 2007;85:660–7. https://doi.org/10.2471/blt.07.043497.",
+      "dataSets": [
+        {
+          "feature": "@body_height",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female"]
+            },
+            {
+              "feature": "@age",
+              "min": 61,
+              "max": 228,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "XLSX",
+            "source": "https://cdn.who.int/media/docs/default-source/child-growth/growth-reference-5-19-years/height-for-age-(5-19-years)/hfa-girls-z-who-2007-exp.xlsx?sfvrsn=79d310ee_2",
+            "access": "public"
+          }
+        },
+        {
+          "feature": "@body_height",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["male"]
+            },
+            {
+              "feature": "@age",
+              "min": 61,
+              "max": 228,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "XLSX",
+            "source": "https://cdn.who.int/media/docs/default-source/child-growth/growth-reference-5-19-years/height-for-age-(5-19-years)/hfa-boys-z-who-2007-exp.xlsx?sfvrsn=7fa263d_2",
+            "access": "public"
+          }
+        },
+        {
+          "feature": "@body_weight",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female"]
+            },
+            {
+              "feature": "@age",
+              "min": 61,
+              "max": 120,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "XLSX",
+            "source": "https://cdn.who.int/media/docs/default-source/child-growth/growth-reference-5-19-years/weight-for-age-(5-10-years)/hfa-girls-z-who-2007-exp_7ea58763-36a2-436d-bef0-7fcfbadd2820.xlsx?sfvrsn=6ede55a4_4",
+            "access": "public"
+          }
+        },
+        {
+          "feature": "@body_weight",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["male"]
+            },
+            {
+              "feature": "@age",
+              "min": 61,
+              "max": 120,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "XLSX",
+            "source": "https://cdn.who.int/media/docs/default-source/child-growth/growth-reference-5-19-years/weight-for-age-(5-10-years)/hfa-boys-z-who-2007-exp_0ff9c43c-8cc0-4c23-9fc6-81290675e08b.xlsx?sfvrsn=b3ca0d6f_4",
+            "access": "public"
+          }
+        },
+        {
+          "feature": "@bmi",
+          "unit": "@kg/m2",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female"]
+            },
+            {
+              "feature": "@age",
+              "min": 61,
+              "max": 228,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "XLSX",
+            "source": "https://cdn.who.int/media/docs/default-source/child-growth/growth-reference-5-19-years/bmi-for-age-(5-19-years)/bmi-girls-z-who-2007-exp.xlsx?sfvrsn=79222875_2",
+            "access": "public"
+          }
+        },
+        {
+          "feature": "@bmi",
+          "unit": "@kg/m2",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["male"]
+            },
+            {
+              "feature": "@age",
+              "min": 61,
+              "max": 228,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "XLSX",
+            "source": "https://cdn.who.int/media/docs/default-source/child-growth/growth-reference-5-19-years/bmi-for-age-(5-19-years)/bmi-boys-z-who-2007-exp.xlsx?sfvrsn=a84bca93_2",
+            "access": "public"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Isojima",
+      "year": 2016,
+      "url": "https://doi.org/10.1038/pr.2015.254",
+      "citation": "Isojima T, Sakazume S, Hasegawa T, Ogata T, Nakanishi T, Nagai T, Yokoya S: Growth references for Japanese individuals with Noonan syndrome. Pediatr Res. 2016 Apr;79(4):543-8. https://doi.org/10.1038/pr.2015.254.",
+      "dataSets": [
+        {
+          "disease": "@noonan_syndrome",
+          "feature": "@body_height",
+          "region": "@japan",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "DOC",
+            "source": "https://static-content.springer.com/esm/art%3A10.1038%2Fpr.2015.254/MediaObjects/41390_2016_BFpr2015254_MOESM333_ESM.doc",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@noonan_syndrome",
+          "feature": "@body_weight",
+          "region": "@japan",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "DOC",
+            "source": "https://static-content.springer.com/esm/art%3A10.1038%2Fpr.2015.254/MediaObjects/41390_2016_BFpr2015254_MOESM333_ESM.doc",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@noonan_syndrome",
+          "feature": "@bmi",
+          "region": "@japan",
+          "unit": "@kg/m2",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "DOC",
+            "source": "https://static-content.springer.com/esm/art%3A10.1038%2Fpr.2015.254/MediaObjects/41390_2016_BFpr2015254_MOESM333_ESM.doc",
+            "access": "public"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Zemel",
+      "year": 2015,
+      "url": "https://doi.org/10.1542/peds.2015-1652",
+      "citation": "B.S. Zemel, M. Pipan, V.A. Stallings, W. Hall, K. Schadt, D.S. Freedman, P. Thorpe: Growth Charts for Children with Down Syndrome in the U.S. Pediatrics; October 2015. https://doi.org/10.1542/peds.2015-1652.",
+      "dataSets": [
+        {
+          "disease": "@down_syndrome",
+          "feature": "@body_length",
+          "region": "@usa",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 1,
+              "max": 36,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9924078/bin/PEDS_20151652SupplementaryData.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@down_syndrome",
+          "feature": "@body_height",
+          "region": "@usa",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 2,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9924078/bin/PEDS_20151652SupplementaryData.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@down_syndrome",
+          "feature": "@body_weight",
+          "region": "@usa",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 36,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9924078/bin/PEDS_20151652SupplementaryData.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@down_syndrome",
+          "feature": "@body_weight",
+          "region": "@usa",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 2,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9924078/bin/PEDS_20151652SupplementaryData.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@down_syndrome",
+          "feature": "@body_weight_for_length",
+          "region": "@usa",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@body_length",
+              "min": 49,
+              "max": 93,
+              "unit": "@cm"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9924078/bin/PEDS_20151652SupplementaryData.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@down_syndrome",
+          "feature": "@bmi",
+          "region": "@usa",
+          "unit": "@kg/m2",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 2,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9924078/bin/PEDS_20151652SupplementaryData.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@down_syndrome",
+          "feature": "@head_circumference",
+          "region": "@usa",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 1,
+              "max": 36,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9924078/bin/PEDS_20151652SupplementaryData.pdf",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@down_syndrome",
+          "feature": "@head_circumference",
+          "region": "@usa",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 2,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "PDF",
+            "source": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9924078/bin/PEDS_20151652SupplementaryData.pdf",
+            "access": "public"
+          }
+        }
+      ]
     }
-  },
+  ],
   "diseases": {
+    "@achondroplasia": {
+      "name": "Achondroplasia",
+      "iri": "http://purl.obolibrary.org/obo/DOID_4480"
+    },
+    "@down_syndrome": {
+      "name": "Down syndrome",
+      "iri": "http://purl.obolibrary.org/obo/DOID_14250"
+    },
     "@hypochondroplasia": {
       "name": "Hypochondroplasia",
       "iri": "http://purl.obolibrary.org/obo/DOID_0080041"
+    },
+    "@noonan_syndrome": {
+      "name": "Noonan syndrome",
+      "iri": "http://purl.obolibrary.org/obo/DOID_3490"
+    },
+    "@obesity": {
+      "name": "Obesity",
+      "iri": "http://purl.obolibrary.org/obo/DOID_9970"
     }
   },
   "regions": {
+    "@usa": {
+      "name": "United States of America",
+      "iri": "http://id.nlm.nih.gov/mesh/D014481"
+    },
+    "@europe": {
+      "name": "Europe",
+      "iri": "http://id.nlm.nih.gov/mesh/D005060"
+    },
     "@germany": {
       "name": "Germany",
       "iri": "http://id.nlm.nih.gov/mesh/D005858"
@@ -58,6 +1566,14 @@
     "@netherlands": {
       "name": "Netherlands",
       "iri": "http://id.nlm.nih.gov/mesh/D009426"
+    },
+    "@china": {
+      "name": "China",
+      "iri": "http://id.nlm.nih.gov/mesh/D002681"
+    },
+    "@japan": {
+      "name": "Japan",
+      "iri": "http://id.nlm.nih.gov/mesh/D007564"
     }
   },
   "features": {
@@ -105,11 +1621,41 @@
       "name": "Sitting height",
       "iri": "https://loinc.org/92999-2"
     },
-    "@sitting_height_per_height": {
-      "name": "Sitting height per height"
+    "@sitting_height_to_height_ratio": {
+      "name": "Sitting-height-to-height-ratio",
+      "iri": "http://www.ebi.ac.uk/efo/EFO_0007118"
     },
-    "@sitting_height_per_leg_length": {
-      "name": "Sitting height per leg length"
+    "@sitting_height_to_leg_length_ratio": {
+      "name": "Sitting-height-to-leg-length-ratio",
+      "iri": "http://snomed.info/id/249842006"
+    },
+    "@body_weight_for_height": {
+      "name": "Body weight for height",
+      "iri": "http://snomed.info/sct/248358009"
+    },
+    "@body_weight_for_length": {
+      "name": "Body weight for length",
+      "iri": "https://example.com/body_weight_for_length"
+    },
+    "@hip_circumference": {
+      "name": "Hip circumference",
+      "iri": "http://snomed.info/sct/284472007"
+    },
+    "@waist_to_hip_ratio": {
+      "name": "Waist-to-hip-ratio",
+      "iri": "http://www.ebi.ac.uk/efo/EFO_0004343"
+    },
+    "@waist_to_height_ratio": {
+      "name": "Waist-to-height-ratio",
+      "iri": "http://snomed.info/sct/1251557006"
+    },
+    "@arm_span": {
+      "name": "Arm span",
+      "iri": "https://loinc.org/56116-7"
+    },
+    "@foot_length": {
+      "name": "Foot length",
+      "iri": "http://snomed.info/id/249815005"
     }
   },
   "units": {
@@ -145,503 +1691,5 @@
       "abbreviation": "Norm",
       "iri": "http://id.nlm.nih.gov/mesh/D016011"
     }
-  },
-  "dataSets": [
-    {
-      "publication": "@kromeyer_hauschild_2015",
-      "region": "@germany",
-      "sex": ["female", "male"],
-      "feature": "@waist_circumference",
-      "unit": "@cm",
-      "method": "@lms",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0,
-          "max": 18,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "format": "CSV",
-        "source": "https://www.tandfonline.com/action/downloadTable?id=T0002&doi=10.3109%2F17477166.2010.490267&downloadType=CSV",
-        "access": "public"
-      }
-    },
-    {
-      "publication": "@kromeyer_hauschild_2011",
-      "region": "@germany",
-      "feature": "@body_height",
-      "unit": "@cm",
-      "method": "@lms",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0,
-          "max": 18,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "format": "CSV",
-        "source": "https://link.springer.com/content/pdf/10.1007/s001120170107.pdf",
-        "access": "restricted"
-      }
-    },
-    {
-      "publication": "@kromeyer_hauschild_2011",
-      "region": "@germany",
-      "feature": "@body_weight",
-      "unit": "@kg",
-      "method": "@lms",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0,
-          "max": 18,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "format": "CSV",
-        "source": "https://link.springer.com/content/pdf/10.1007/s001120170107.pdf",
-        "access": "restricted"
-      }
-    },
-    {
-      "publication": "@kromeyer_hauschild_2011",
-      "region": "@germany",
-      "feature": "@bmi",
-      "unit": "@kg/m2",
-      "method": "@lms",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0,
-          "max": 18,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "format": "CSV",
-        "source": "https://link.springer.com/content/pdf/10.1007/s001120170107.pdf",
-        "access": "restricted"
-      }
-    },
-    {
-      "publication": "@cheung_2023",
-      "disease": "@hypochondroplasia",
-      "feature": "@body_height",
-      "unit": "@cm",
-      "method": "@norm",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0,
-          "max": 16,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "access": "on request"
-      }
-    },
-    {
-      "publication": "@cheung_2023",
-      "disease": "@hypochondroplasia",
-      "feature": "@body_weight",
-      "unit": "@kg",
-      "method": "@lms",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0,
-          "max": 16,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "access": "on request"
-      }
-    },
-    {
-      "publication": "@cheung_2023",
-      "disease": "@hypochondroplasia",
-      "feature": "@head_circumference",
-      "unit": "@cm",
-      "method": "@norm",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0,
-          "max": 16,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "access": "on request"
-      }
-    },
-    {
-      "publication": "@voigt_2006",
-      "region": "@germany",
-      "feature": "@body_length",
-      "unit": "@cm",
-      "method": "@norm",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@gestational_age",
-          "min": 20,
-          "max": 43,
-          "unit": "@mo"
-        }
-      ],
-      "dataSet": {
-        "format": "PDF",
-        "source": "https://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-2006-924458.pdf",
-        "access": "public"
-      }
-    },
-    {
-      "publication": "@voigt_2006",
-      "region": "@germany",
-      "feature": "@body_weight",
-      "unit": "@kg",
-      "method": "@norm",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@gestational_age",
-          "min": 20,
-          "max": 43,
-          "unit": "@mo"
-        }
-      ],
-      "dataSet": {
-        "format": "PDF",
-        "source": "https://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-2006-924458.pdf",
-        "access": "public"
-      }
-    },
-    {
-      "publication": "@voigt_2006",
-      "region": "@germany",
-      "feature": "@head_circumference",
-      "unit": "@cm",
-      "method": "@norm",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@gestational_age",
-          "min": 20,
-          "max": 43,
-          "unit": "@mo"
-        }
-      ],
-      "dataSet": {
-        "format": "PDF",
-        "source": "https://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-2006-924458.pdf",
-        "access": "public"
-      }
-    },
-    {
-      "publication": "@areas_2018",
-      "disease": "@hypochondroplasia",
-      "feature": "@body_height",
-      "unit": "@cm",
-      "method": "@lms",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0,
-          "max": 17,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "format": "DOC",
-        "source": "https://www.degruyter.com/document/doi/10.1515/jpem-2018-0046/downloadAsset/suppl/jpem-2018-0046_suppl.zip",
-        "access": "public"
-      }
-    },
-    {
-      "publication": "@areas_2018",
-      "disease": "@hypochondroplasia",
-      "feature": "@leg_length",
-      "unit": "@cm",
-      "method": "@lms",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0,
-          "max": 17,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "format": "DOC",
-        "source": "https://www.degruyter.com/document/doi/10.1515/jpem-2018-0046/downloadAsset/suppl/jpem-2018-0046_suppl.zip",
-        "access": "public"
-      }
-    },
-    {
-      "publication": "@areas_2018",
-      "disease": "@hypochondroplasia",
-      "feature": "@sitting_height",
-      "unit": "@cm",
-      "method": "@lms",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0,
-          "max": 17,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "format": "DOC",
-        "source": "https://www.degruyter.com/document/doi/10.1515/jpem-2018-0046/downloadAsset/suppl/jpem-2018-0046_suppl.zip",
-        "access": "public"
-      }
-    },
-    {
-      "publication": "@areas_2018",
-      "disease": "@hypochondroplasia",
-      "feature": "@sitting_height_per_height",
-      "method": "@lms",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0,
-          "max": 17,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "format": "DOC",
-        "source": "https://www.degruyter.com/document/doi/10.1515/jpem-2018-0046/downloadAsset/suppl/jpem-2018-0046_suppl.zip",
-        "access": "public"
-      }
-    },
-    {
-      "publication": "@areas_2018",
-      "disease": "@hypochondroplasia",
-      "feature": "@sitting_height_per_leg_length",
-      "method": "@lms",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0,
-          "max": 17,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "format": "DOC",
-        "source": "https://www.degruyter.com/document/doi/10.1515/jpem-2018-0046/downloadAsset/suppl/jpem-2018-0046_suppl.zip",
-        "access": "public"
-      }
-    },
-    {
-      "publication": "@redlefsen_2007",
-      "region": "@germany",
-      "feature": "@body_height",
-      "unit": "@cm",
-      "method": "@norm",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0,
-          "max": 18,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "format": "PDF",
-        "source": "https://d-nb.info/990166104/34",
-        "access": "public"
-      }
-    },
-    {
-      "publication": "@redlefsen_2007",
-      "region": "@germany",
-      "feature": "@body_weight",
-      "unit": "@kg",
-      "method": "@lms",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0,
-          "max": 18,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "format": "PDF",
-        "source": "https://d-nb.info/990166104/34",
-        "access": "public"
-      }
-    },
-    {
-      "publication": "@redlefsen_2007",
-      "region": "@germany",
-      "feature": "@bmi",
-      "unit": "@kg/m2",
-      "method": "@lms",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 1,
-          "max": 18,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "format": "PDF",
-        "source": "https://d-nb.info/990166104/34",
-        "access": "public"
-      }
-    },
-    {
-      "publication": "@fredriks_2005",
-      "region": "@netherlands",
-      "feature": "@leg_length",
-      "unit": "@cm",
-      "method": "@lms",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0.25,
-          "max": 21,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "format": "PDF",
-        "source": "https://adc.bmj.com/content/archdischild/90/8/807.full.pdf",
-        "access": "restricted"
-      }
-    },
-    {
-      "publication": "@fredriks_2005",
-      "region": "@netherlands",
-      "feature": "@sitting_height",
-      "unit": "@cm",
-      "method": "@lms",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0.25,
-          "max": 21,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "format": "PDF",
-        "source": "https://adc.bmj.com/content/archdischild/90/8/807.full.pdf",
-        "access": "restricted"
-      }
-    },
-    {
-      "publication": "@fredriks_2005",
-      "region": "@netherlands",
-      "feature": "@sitting_height_per_height",
-      "method": "@lms",
-      "domainRanges": [
-        {
-          "feature": "@sex",
-          "values": ["female", "male"]
-        },
-        {
-          "feature": "@age",
-          "min": 0.25,
-          "max": 21,
-          "unit": "@a"
-        }
-      ],
-      "dataSet": {
-        "format": "PDF",
-        "source": "https://adc.bmj.com/content/archdischild/90/8/807.full.pdf",
-        "access": "restricted"
-      }
-    }
-  ]
+  }
 }
