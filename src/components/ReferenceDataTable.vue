@@ -23,7 +23,7 @@ const data = computed(() =>
 )
 
 const filters = ref({
-  publication: { value: '', keys: ['publication.name'] },
+  publication: { value: '', keys: ['publication.name', 'publication.year'] },
   disease: { value: undefined, keys: ['disease.iri'] },
   region: { value: undefined, keys: ['region.iri'] },
   feature: { value: undefined, keys: ['feature.iri'] },
