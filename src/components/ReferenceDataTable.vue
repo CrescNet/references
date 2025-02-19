@@ -161,8 +161,11 @@ function deriveRowspan(rows: [], key: string, i: number) {
             </div>
           </td>
           <td>
-            <div
-              class="tooltip"
+            <a
+              v-if="row.dataSet && row.dataSet.access !== 'on request'"
+              role="button"
+              class="btn btn-xs tooltip inline-flex"
+              :href="row.dataSet.source"
               :data-tip="
                 row.dataSet.access === 'public'
                   ? 'Public'
@@ -171,20 +174,11 @@ function deriveRowspan(rows: [], key: string, i: number) {
                     : 'On request to authors'
               "
             >
-              <lock-open-icon v-show="row.dataSet.access === 'public'" class="inline size-3 mr-1" />
-              <lock-closed-icon
-                v-show="row.dataSet.access === 'restricted'"
-                class="inline size-3 mr-1"
-              />
-              <no-symbol-icon
-                v-show="row.dataSet.access === 'on request'"
-                class="inline size-3 mr-1"
-              />
-              <term-ref
-                v-if="row.dataSet"
-                :term="{ name: row.dataSet.format, iri: row.dataSet.source }"
-              />
-            </div>
+              <lock-open-icon v-show="row.dataSet.access === 'public'" class="size-3 mr-1" />
+              <lock-closed-icon v-show="row.dataSet.access === 'restricted'" class="size-3 mr-1" />
+              {{ row.dataSet.format }}
+            </a>
+            <no-symbol-icon v-else class="size-3" />
           </td>
           <td>
             <a
