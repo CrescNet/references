@@ -1246,6 +1246,86 @@
           }
         }
       ]
+    },
+    {
+      "name": "Isojima",
+      "year": 2016,
+      "url": "https://doi.org/10.1038/pr.2015.254",
+      "citation": "Isojima T, Sakazume S, Hasegawa T, Ogata T, Nakanishi T, Nagai T, Yokoya S: Growth references for Japanese individuals with Noonan syndrome. Pediatr Res. 2016 Apr;79(4):543-8. https://doi.org/10.1038/pr.2015.254.",
+      "dataSets": [
+        {
+          "disease": "@noonan_syndrome",
+          "feature": "@body_height",
+          "region": "@japan",
+          "unit": "@cm",
+          "method": "@norm",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "DOC",
+            "source": "https://static-content.springer.com/esm/art%3A10.1038%2Fpr.2015.254/MediaObjects/41390_2016_BFpr2015254_MOESM333_ESM.doc",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@noonan_syndrome",
+          "feature": "@body_height",
+          "region": "@japan",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "DOC",
+            "source": "https://static-content.springer.com/esm/art%3A10.1038%2Fpr.2015.254/MediaObjects/41390_2016_BFpr2015254_MOESM333_ESM.doc",
+            "access": "public"
+          }
+        },
+        {
+          "disease": "@noonan_syndrome",
+          "feature": "@body_height",
+          "region": "@japan",
+          "unit": "@kg/m2",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["female", "male"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 20,
+              "unit": "@a"
+            }
+          ],
+          "dataSet": {
+            "format": "DOC",
+            "source": "https://static-content.springer.com/esm/art%3A10.1038%2Fpr.2015.254/MediaObjects/41390_2016_BFpr2015254_MOESM333_ESM.doc",
+            "access": "public"
+          }
+        }
+      ]
     }
   ],
   "diseases": {
@@ -1256,6 +1336,10 @@
     "@hypochondroplasia": {
       "name": "Hypochondroplasia",
       "iri": "http://purl.obolibrary.org/obo/DOID_0080041"
+    },
+    "@noonan_syndrome": {
+      "name": "Noonan syndrome",
+      "iri": "http://purl.obolibrary.org/obo/DOID_3490"
     },
     "@obesity": {
       "name": "Obesity",
@@ -1278,6 +1362,10 @@
     "@china": {
       "name": "China",
       "iri": "http://id.nlm.nih.gov/mesh/D002681"
+    },
+    "@japan": {
+      "name": "Japan",
+      "iri": "http://id.nlm.nih.gov/mesh/D007564"
     }
   },
   "features": {
