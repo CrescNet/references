@@ -86,7 +86,7 @@ function deriveRowspan(rows: [], key: string, i: number) {
           <v-th sort-key="dataSet.format" class="select-none">Data set</v-th>
           <th></th>
         </tr>
-        <tr class="bg-base-300 secondary-header">
+        <tr class="bg-base-300 top-[36.5px]">
           <td>
             <set-filter v-model="filters.disease.value" :options="data.flatMap((u) => u.disease)" />
           </td>
@@ -208,8 +208,5 @@ table tbody td {
 }
 .primary-header {
   box-shadow: inset 0 -5px 0 0 var(--color-base-300);
-}
-.secondary-header {
-  top: 29.5px;
 }
 </style>
