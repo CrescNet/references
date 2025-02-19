@@ -1083,7 +1083,7 @@
         },
         {
           "disease": "@achondroplasia",
-          "feature": "@food_length",
+          "feature": "@foot_length",
           "unit": "@cm",
           "region": "@europe",
           "method": "@norm",
@@ -1622,24 +1622,28 @@
       "iri": "https://loinc.org/92999-2"
     },
     "@sitting_height_to_height_ratio": {
-      "name": "Sitting-height-to-height-ratio"
+      "name": "Sitting-height-to-height-ratio",
+      "iri": "http://www.ebi.ac.uk/efo/EFO_0007118"
     },
     "@sitting_height_to_leg_length_ratio": {
-      "name": "Sitting-height-to-leg-length-ratio"
+      "name": "Sitting-height-to-leg-length-ratio",
+      "iri": "http://snomed.info/id/249842006"
     },
     "@body_weight_for_height": {
       "name": "Body weight for height",
       "iri": "http://snomed.info/sct/248358009"
     },
     "@body_weight_for_length": {
-      "name": "Body weight for length"
+      "name": "Body weight for length",
+      "iri": "https://example.com/body_weight_for_length"
     },
     "@hip_circumference": {
       "name": "Hip circumference",
       "iri": "http://snomed.info/sct/284472007"
     },
     "@waist_to_hip_ratio": {
-      "name": "Waist-to-hip-ratio"
+      "name": "Waist-to-hip-ratio",
+      "iri": "http://www.ebi.ac.uk/efo/EFO_0004343"
     },
     "@waist_to_height_ratio": {
       "name": "Waist-to-height-ratio",
@@ -1649,8 +1653,9 @@
       "name": "Arm span",
       "iri": "https://loinc.org/56116-7"
     },
-    "@food_length": {
-      "name": "Food length"
+    "@foot_length": {
+      "name": "Foot length",
+      "iri": "http://snomed.info/id/249815005"
     }
   },
   "units": {
