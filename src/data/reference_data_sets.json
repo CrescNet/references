@@ -53,12 +53,22 @@
       "year": 2011,
       "url": "https://doi.org/10.25646/3179",
       "citation": "Neuhauser H, Schienkiewitz A, Rosario AS, Dortschy R, Kurth B-M. Referenzperzentile für anthropometrische Maßzahlen und Blutdruck aus der Studie zur Gesundheit von Kindern und Jugendlichen in Deutschland (KiGGS). Robert Koch-Institut; 2013. https://doi.org/10.25646/3179."
+    },
+    "@kempf_2021": {
+      "name": "Kempf",
+      "year": 2021,
+      "url": "https://doi.org/10.1016/j.eclinm.2021.100977",
+      "citation": "Kempf E, Vogel M, Vogel T, Kratzsch J, Landgraf K, Kühnapfel A, et al. Dynamic alterations in linear growth and endocrine parameters in children with obesity and height reference values. EClinicalMedicine 2021:100977. https://doi.org/10.1016/j.eclinm.2021.100977."
     }
   },
   "diseases": {
     "@hypochondroplasia": {
       "name": "Hypochondroplasia",
       "iri": "http://purl.obolibrary.org/obo/DOID_0080041"
+    },
+    "@obesity": {
+      "name": "Obesity",
+      "iri": "http://purl.obolibrary.org/obo/DOID_9970"
     }
   },
   "regions": {
@@ -983,6 +993,31 @@
       "dataSet": {
         "format": "PDF",
         "source": "https://edoc.rki.de/bitstream/handle/176904/3254/28jWMa04ZjppM.pdf?sequence=1&isAllowed=y",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@kempf_2021",
+      "disease": "@obesity",
+      "region": "@germany",
+      "feature": "@body_height",
+      "unit": "@cm",
+      "method": "@lms",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 0,
+          "max": 18,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "XLSX",
+        "source": "https://ars.els-cdn.com/content/image/1-s2.0-S2589537021002571-mmc3.xlsx",
         "access": "public"
       }
     }
