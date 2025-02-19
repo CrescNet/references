@@ -42,6 +42,12 @@
       "year": "2005",
       "url": "https://doi.org/10.1136/adc.2004.050799",
       "citation": "Fredriks AM. Nationwide age references for sitting height, leg length, and sitting height/height ratio, and their diagnostic value for disproportionate growth disorders. Archives of Disease in Childhood 2005;90:807–12. https://doi.org/10.1136/adc.2004.050799."
+    },
+    "@zong_2013": {
+      "name": "Zong",
+      "year": 2013,
+      "url": "https://doi.org/10.1371/journal.pone.0059569",
+      "citation": "Zong X-N, Li H. Construction of a New Growth References for China Based on Urban Chinese Children: Comparison with the WHO Growth Standards. PLoS ONE 2013;8:e59569. https://doi.org/10.1371/journal.pone.0059569."
     }
   },
   "diseases": {
@@ -58,6 +64,10 @@
     "@netherlands": {
       "name": "Netherlands",
       "iri": "http://id.nlm.nih.gov/mesh/D009426"
+    },
+    "@china": {
+      "name": "China",
+      "iri": "http://id.nlm.nih.gov/mesh/D002681"
     }
   },
   "features": {
@@ -110,6 +120,13 @@
     },
     "@sitting_height_per_leg_length": {
       "name": "Sitting height per leg length"
+    },
+    "@body_weight_for_height": {
+      "name": "Body weight for height",
+      "iri": "http://snomed.info/sct/248358009"
+    },
+    "@body_weight_for_length": {
+      "name": "Body weight for length"
     }
   },
   "units": {
@@ -641,6 +658,150 @@
         "format": "PDF",
         "source": "https://adc.bmj.com/content/archdischild/90/8/807.full.pdf",
         "access": "restricted"
+      }
+    },
+    {
+      "publication": "@zong_2013",
+      "region": "@china",
+      "feature": "@body_height",
+      "unit": "@cm",
+      "method": "@lms",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 0,
+          "max": 216,
+          "unit": "@mo"
+        }
+      ],
+      "dataSet": {
+        "format": "PNG",
+        "source": "https://journals.plos.org/plosone/article/figure/image?size=large&download=&id=10.1371/journal.pone.0059569.t003",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@zong_2013",
+      "region": "@china",
+      "feature": "@body_weight",
+      "unit": "@kg",
+      "method": "@lms",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 0,
+          "max": 216,
+          "unit": "@mo"
+        }
+      ],
+      "dataSet": {
+        "format": "PNG",
+        "source": "https://journals.plos.org/plosone/article/figure/image?size=large&download=&id=10.1371/journal.pone.0059569.t002",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@zong_2013",
+      "region": "@china",
+      "feature": "@head_circumference",
+      "unit": "@cm",
+      "method": "@lms",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 0,
+          "max": 72,
+          "unit": "@mo"
+        }
+      ],
+      "dataSet": {
+        "format": "PNG",
+        "source": "https://journals.plos.org/plosone/article/figure/image?size=large&download=&id=10.1371/journal.pone.0059569.t004",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@zong_2013",
+      "region": "@china",
+      "feature": "@bmi",
+      "unit": "@kg/m2",
+      "method": "@lms",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 0,
+          "max": 216,
+          "unit": "@mo"
+        }
+      ],
+      "dataSet": {
+        "format": "PNG",
+        "source": "https://journals.plos.org/plosone/article/figure/image?size=large&download=&id=10.1371/journal.pone.0059569.t007",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@zong_2013",
+      "region": "@china",
+      "feature": "@body_weight_for_length",
+      "unit": "@kg",
+      "method": "@lms",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@body_length",
+          "min": 65,
+          "max": 125,
+          "unit": "@cm"
+        }
+      ],
+      "dataSet": {
+        "format": "PNG",
+        "source": "https://journals.plos.org/plosone/article/figure/image?size=large&download=&id=10.1371/journal.pone.0059569.t005",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@zong_2013",
+      "region": "@china",
+      "feature": "@body_weight_for_height",
+      "unit": "@kg",
+      "method": "@lms",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@body_height",
+          "min": 65,
+          "max": 125,
+          "unit": "@cm"
+        }
+      ],
+      "dataSet": {
+        "format": "PNG",
+        "source": "https://journals.plos.org/plosone/article/figure/image?size=large&download=&id=10.1371/journal.pone.0059569.t006",
+        "access": "public"
       }
     }
   ]
