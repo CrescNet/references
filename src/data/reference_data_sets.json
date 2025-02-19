@@ -30,7 +30,6 @@
       "url": "https://doi.org/10.1515/jpem-2018-0046",
       "citation": "Arenas MA, del Pino M, Fano V. FGFR3-related hypochondroplasia: longitudinal growth in 57 children with the p.Asn540Lys mutation. JPEM 2018;31:1279–84. https://doi.org/10.1515/jpem-2018-0046."
     },
-
     "@redlefsen_2007": {
       "name": "Redlefsen",
       "year": 2007,
@@ -48,6 +47,12 @@
       "year": 2013,
       "url": "https://doi.org/10.1371/journal.pone.0059569",
       "citation": "Zong X-N, Li H. Construction of a New Growth References for China Based on Urban Chinese Children: Comparison with the WHO Growth Standards. PLoS ONE 2013;8:e59569. https://doi.org/10.1371/journal.pone.0059569."
+    },
+    "@kiggs_2011": {
+      "name": "KiGGS",
+      "year": 2011,
+      "url": "https://doi.org/10.25646/3179",
+      "citation": "Neuhauser H, Schienkiewitz A, Rosario AS, Dortschy R, Kurth B-M. Referenzperzentile für anthropometrische Maßzahlen und Blutdruck aus der Studie zur Gesundheit von Kindern und Jugendlichen in Deutschland (KiGGS). Robert Koch-Institut; 2013. https://doi.org/10.25646/3179."
     }
   },
   "diseases": {
@@ -115,11 +120,11 @@
       "name": "Sitting height",
       "iri": "https://loinc.org/92999-2"
     },
-    "@sitting_height_per_height": {
-      "name": "Sitting height per height"
+    "@sitting_height_to_height_ratio": {
+      "name": "Sitting-height-to-height-ratio"
     },
-    "@sitting_height_per_leg_length": {
-      "name": "Sitting height per leg length"
+    "@sitting_height_to_leg_length_ratio": {
+      "name": "Sitting-height-to-leg-length-ratio"
     },
     "@body_weight_for_height": {
       "name": "Body weight for height",
@@ -127,6 +132,17 @@
     },
     "@body_weight_for_length": {
       "name": "Body weight for length"
+    },
+    "@hip_circumference": {
+      "name": "Hip circumference",
+      "iri": "http://snomed.info/sct/284472007"
+    },
+    "@waist_to_hip_ratio": {
+      "name": "Waist-to-hip-ratio"
+    },
+    "@waist_to_height_ratio": {
+      "name": "Waist-to-height-ratio",
+      "iri": "http://snomed.info/sct/1251557006"
     }
   },
   "units": {
@@ -474,7 +490,7 @@
     {
       "publication": "@areas_2018",
       "disease": "@hypochondroplasia",
-      "feature": "@sitting_height_per_height",
+      "feature": "@sitting_height_to_height_ratio",
       "method": "@lms",
       "domainRanges": [
         {
@@ -497,7 +513,7 @@
     {
       "publication": "@areas_2018",
       "disease": "@hypochondroplasia",
-      "feature": "@sitting_height_per_leg_length",
+      "feature": "@sitting_height_to_leg_length_ratio",
       "method": "@lms",
       "domainRanges": [
         {
@@ -640,7 +656,7 @@
     {
       "publication": "@fredriks_2005",
       "region": "@netherlands",
-      "feature": "@sitting_height_per_height",
+      "feature": "@sitting_height_to_height_ratio",
       "method": "@lms",
       "domainRanges": [
         {
@@ -801,6 +817,172 @@
       "dataSet": {
         "format": "PNG",
         "source": "https://journals.plos.org/plosone/article/figure/image?size=large&download=&id=10.1371/journal.pone.0059569.t006",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@kiggs_2011",
+      "region": "@germany",
+      "feature": "@body_height",
+      "unit": "@cm",
+      "method": "@lms",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 0,
+          "max": 18,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "PDF",
+        "source": "https://edoc.rki.de/bitstream/handle/176904/3254/28jWMa04ZjppM.pdf?sequence=1&isAllowed=y",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@kiggs_2011",
+      "region": "@germany",
+      "feature": "@body_weight",
+      "unit": "@kg",
+      "method": "@lms",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 0,
+          "max": 18,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "PDF",
+        "source": "https://edoc.rki.de/bitstream/handle/176904/3254/28jWMa04ZjppM.pdf?sequence=1&isAllowed=y",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@kiggs_2011",
+      "region": "@germany",
+      "feature": "@bmi",
+      "unit": "@kg/m2",
+      "method": "@lms",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 0.333,
+          "max": 18,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "PDF",
+        "source": "https://edoc.rki.de/bitstream/handle/176904/3254/28jWMa04ZjppM.pdf?sequence=1&isAllowed=y",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@kiggs_2011",
+      "region": "@germany",
+      "feature": "@waist_circumference",
+      "unit": "@cm",
+      "method": "@lms",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 11,
+          "max": 18,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "PDF",
+        "source": "https://edoc.rki.de/bitstream/handle/176904/3254/28jWMa04ZjppM.pdf?sequence=1&isAllowed=y",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@kiggs_2011",
+      "region": "@germany",
+      "feature": "@hip_circumference",
+      "unit": "@cm",
+      "method": "@lms",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 11,
+          "max": 18,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "PDF",
+        "source": "https://edoc.rki.de/bitstream/handle/176904/3254/28jWMa04ZjppM.pdf?sequence=1&isAllowed=y",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@kiggs_2011",
+      "region": "@germany",
+      "feature": "@waist_to_hip_ratio",
+      "method": "@lms",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 11,
+          "max": 18,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "PDF",
+        "source": "https://edoc.rki.de/bitstream/handle/176904/3254/28jWMa04ZjppM.pdf?sequence=1&isAllowed=y",
+        "access": "public"
+      }
+    },
+    {
+      "publication": "@kiggs_2011",
+      "region": "@germany",
+      "feature": "@waist_to_height_ratio",
+      "method": "@lms",
+      "domainRanges": [
+        {
+          "feature": "@sex",
+          "values": ["female", "male"]
+        },
+        {
+          "feature": "@age",
+          "min": 11,
+          "max": 18,
+          "unit": "@a"
+        }
+      ],
+      "dataSet": {
+        "format": "PDF",
+        "source": "https://edoc.rki.de/bitstream/handle/176904/3254/28jWMa04ZjppM.pdf?sequence=1&isAllowed=y",
         "access": "public"
       }
     }
