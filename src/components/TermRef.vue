@@ -20,7 +20,12 @@ defineProps<{
     :data-tip="term.name"
     >{{ term.abbreviation || term.name || 'term' }}</a
   >
-  <div v-else-if="term" :class="{ tooltip: term.abbreviation && term.name }" class="hover:bg-base-300 rounded p-px" :data-tip="term.name">
+  <div
+    v-else-if="term"
+    :class="{ tooltip: term.abbreviation && term.name }"
+    class="hover:bg-base-300 rounded p-px"
+    :data-tip="term.name"
+  >
     {{ term.abbreviation || term.name }}
   </div>
   <div v-else></div>

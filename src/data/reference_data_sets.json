@@ -1526,6 +1526,198 @@
           }
         }
       ]
+    },
+    {
+      "name": "CDC",
+      "year": 2002,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12043359",
+      "citation": "Kuczmarski RJ, Ogden CL, Guo SS, Grummer-Strawn LM, Flegal KM, Mei Z, et al. 2000 CDC Growth Charts for the United States: methods and development. Vital Health Stat 11 2002:1–190.",
+      "dataSets": [
+        {
+          "feature": "@body_weight",
+          "region": "@usa",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["1=male", "2=female"]
+            },
+            {
+              "feature": "@age",
+              "min": 24,
+              "max": 240,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "CSV",
+            "source": "https://www.cdc.gov/growthcharts/data/zscore/wtage.csv",
+            "access": "public"
+          }
+        },
+        {
+          "feature": "@body_height",
+          "region": "@usa",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["1=male", "2=female"]
+            },
+            {
+              "feature": "@age",
+              "min": 24,
+              "max": 240,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "CSV",
+            "source": "https://www.cdc.gov/growthcharts/data/zscore/statage.csv",
+            "access": "public"
+          }
+        },
+        {
+          "feature": "@bmi",
+          "region": "@usa",
+          "unit": "@kg/m2",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["1=male", "2=female"]
+            },
+            {
+              "feature": "@age",
+              "min": 24,
+              "max": 240,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "CSV",
+            "source": "https://www.cdc.gov/growthcharts/data/zscore/bmiagerev.csv",
+            "access": "public"
+          }
+        },
+        {
+          "feature": "@body_weight",
+          "region": "@usa",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["1=male", "2=female"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 36,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "CSV",
+            "source": "https://www.cdc.gov/growthcharts/data/zscore/wtageinf.csv",
+            "access": "public"
+          }
+        },
+        {
+          "feature": "@body_length",
+          "region": "@usa",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["1=male", "2=female"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 35.5,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "CSV",
+            "source": "https://www.cdc.gov/growthcharts/data/zscore/lenageinf.csv",
+            "access": "public"
+          }
+        },
+        {
+          "feature": "@body_weight_for_length",
+          "region": "@usa",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["1=male", "2=female"]
+            },
+            {
+              "feature": "@body_length",
+              "min": 45,
+              "max": 103.5,
+              "unit": "@cm"
+            }
+          ],
+          "dataSet": {
+            "format": "CSV",
+            "source": "https://www.cdc.gov/growthcharts/data/zscore/wtleninf.csv",
+            "access": "public"
+          }
+        },
+        {
+          "feature": "@head_circumference",
+          "region": "@usa",
+          "unit": "@cm",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["1=male", "2=female"]
+            },
+            {
+              "feature": "@age",
+              "min": 0,
+              "max": 36,
+              "unit": "@mo"
+            }
+          ],
+          "dataSet": {
+            "format": "CSV",
+            "source": "https://www.cdc.gov/growthcharts/data/zscore/hcageinf.csv",
+            "access": "public"
+          }
+        },
+        {
+          "feature": "@body_weight_for_height",
+          "region": "@usa",
+          "unit": "@kg",
+          "method": "@lms",
+          "domainRanges": [
+            {
+              "feature": "@sex",
+              "values": ["1=male", "2=female"]
+            },
+            {
+              "feature": "@body_height",
+              "min": 77,
+              "max": 121.5,
+              "unit": "@cm"
+            }
+          ],
+          "dataSet": {
+            "format": "CSV",
+            "source": "https://www.cdc.gov/growthcharts/data/zscore/wtstat.csv",
+            "access": "public"
+          }
+        }
+      ]
     }
   ],
   "diseases": {
