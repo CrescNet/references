@@ -1,26 +1,16 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 import { FlagIcon, LockClosedIcon, LockOpenIcon, NoSymbolIcon } from '@heroicons/vue/16/solid'
-import {
-  diseases,
-  features,
-  methods,
-  publications,
-  regions,
-  units,
-} from '../data/reference_data_sets.json'
 import TermRef from './TermRef.vue'
 import SetFilter from './SetFilter.vue'
+import type { DataSet } from './model'
 
-const data = computed(() =>
-  publications.flatMap((p) =>
-    p.dataSets?.map((d) => {
-      const dataSet = populateReferences(d)
-      dataSet.publication = p
-      return dataSet
-    }),
-  ),
-)
+defineProps({
+  data: {
+    type: Array as () => DataSet[],
+    default: () => [],
+  },
+})
 
 const filters = ref({
   publication: { value: '', keys: ['publication.name', 'publication.year'] },
@@ -33,30 +23,6 @@ const filters = ref({
 
 function publicationByYear(row: { publication: { name: string; year: number } }) {
   return `${row.publication.year} - ${row.publication.name}`
-}
-
-// @ts-expect-error TS7053
-function populateReferences(dataSet) {
-  const d = { ...dataSet }
-  // @ts-expect-error TS7053
-  if (d.disease) d.disease = diseases[d.disease]
-  // @ts-expect-error TS7053
-  if (d.region) d.region = regions[d.region]
-  // @ts-expect-error TS7053
-  if (d.feature) d.feature = features[d.feature]
-  // @ts-expect-error TS7053
-  d.domainRanges?.forEach((r) => {
-    // @ts-expect-error TS7053
-    if (r.feature) r.feature = features[r.feature]
-    // @ts-expect-error TS7053
-    if (r.unit) r.unit = units[r.unit]
-    return r
-  })
-  // @ts-expect-error TS7053
-  if (d.unit) d.unit = units[d.unit]
-  // @ts-expect-error TS7053
-  if (d.method) d.method = methods[d.method]
-  return d
 }
 
 function deriveRowspan(rows: [], key: string, i: number) {
@@ -93,7 +59,9 @@ function deriveRowspan(rows: [], key: string, i: number) {
           <td>
             <set-filter v-model="filters.region.value" :options="data.flatMap((u) => u.region)" />
           </td>
-          <td><input v-model="filters.publication.value" type="text" class="input input-xs" /></td>
+          <td>
+            <input v-model="filters.publication.value" type="text" class="input input-xs" />
+          </td>
           <td>
             <set-filter v-model="filters.feature.value" :options="data.flatMap((u) => u.feature)" />
           </td>
